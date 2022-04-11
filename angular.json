@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "adrii-cabello"
+  "defaultProject": "adrii-cabello",
+  "cli": {
+    "analytics": "ad6bb462-bc58-4d67-a92d-29bb97272629"
+  }
 }
