@@ -1,0 +1,29 @@
+<nav>
+    <a href="#" [ngClass]="{ 'active': active === '#'}" (click)="setActiveNav('#')">
+        <span class="material-icons">
+            home
+        </span>
+    </a>
+    <a href="#about" [ngClass]="{ 'active': active === '#about'}" (click)="setActiveNav('#about')">
+        <span class="material-icons">
+            person
+        </span>
+    </a>
+    <a href="#experience" [ngClass]="{ 'active': active === '#experience'}" (click)="setActiveNav('#experience')">
+        <span class="material-icons">
+            import_contacts
+        </span>
+    </a>
+
+
+    <a href="#portfolio" [ngClass]="{ 'active': active === '#portfolio'}" (click)="setActiveNav('#portfolio')">
+        <span class="material-icons">
+            work_outline
+        </span>
+    </a>
+    <a href="#contact" [ngClass]="{ 'active': active === '#contact'}" (click)="setActiveNav('#contact')">
+        <span class="material-icons">
+            email
+        </span>
+    </a>
+</nav>
