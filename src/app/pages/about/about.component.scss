@@ -1,4 +1,9 @@
+.about{
+    padding-top: 3rem;
+}
+
 .about-container {
+    padding-top: 2rem;
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
@@ -7,14 +12,14 @@
 .about-me {
     width: 100%;
     aspect-ratio: 1/1;
-    border-radius: 2rem;
+   border-radius: 4px;
     background: linear-gradient(45deg, transparent, var(--color--primary), transparent);
     display: grid;
     place-items: center;
 }
 
 .about-me-image {
-    border-radius: 2rem;
+   border-radius: 4px;
     overflow: hidden;
     transform: rotate(10deg);
     height: 400px;
@@ -35,9 +40,9 @@
 }
 
 .about-card {
-    background: var(--color--bg-variant);
+    background: var(--light-navy);
     border: 1px solid transparent;
-    border-radius: 1rem;
+    border-radius: 4px;
     padding: 2rem;
     text-align: center;
     img {
@@ -91,7 +96,7 @@ img{
     }
 
     .about-me-image {
-        border-radius: 2rem;
+       border-radius: 4px;
         overflow: hidden;
         transform: rotate(10deg);
         width: 100%;
@@ -128,7 +133,7 @@ img{
     }
 
     .about-me-image {
-        border-radius: 2rem;
+       border-radius: 4px;
         overflow: hidden;
         transform: rotate(10deg);
         height: 215px;

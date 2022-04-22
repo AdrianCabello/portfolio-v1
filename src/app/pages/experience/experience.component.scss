@@ -1,25 +1,62 @@
+.experience {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+
 .experience-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
-.experience-container > div {
-    background: var(--color--bg-variant);
+.experience-container-exp {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.experience-exp {
+    background: var(--light-navy);
     padding: 2.4rem 5rem;
-    border-radius: 2rem;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    width: 50%;
+    display: flex;
+    .exp-company {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0.3rem;
+
+        span {
+            cursor: pointer;
+            padding: 0.3rem;
+            border: 1px solid #ccc;
+            border-color: transparent;
+            margin-bottom: 0.5rem;
+            opacity: 0.6;
+            &:hover {
+                background: transparent;
+                border-color: var(--light-navy);
+                /*     border: 1px solid #ccc; */
+            }
+        }
+    }
+    .exp-info {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.experience-container > div {
+    background: var(--light-navy);
+    padding: 2.4rem 5rem;
+    border-radius: 4px;
     border: 1px solid transparent;
     transition: var(--transition);
 }
 
-.experience-container > div:hover {
-    background-color: transparent;
-    border-color: var(--color--primary-variant);
-    cursor: default;
-}
-
 .experience-container > div h3 {
-    text-align: center;
     margin-bottom: 2rem;
     color: var(--color--primary);
 }
@@ -34,7 +71,6 @@
     display: flex;
     gap: 1rem;
 }
-
 
 /* Media Queries (Medium Devices) */
 

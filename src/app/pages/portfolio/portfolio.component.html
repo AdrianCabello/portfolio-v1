@@ -1,21 +1,49 @@
-<section id="portfolio">
+<section id="portfolio" class="portfolio">
 
     <h5>My recent Work</h5>
     <h2>Portfolio</h2>
 
     <div class="container portfolio-container">
-        <ng-container *ngFor="let portfolio of portfolios">
-            <article class="portfolio-item">
-                <div class="portfolio-item-image">
-                    <img src="../../../assets/portfolio1.jpg" alt="Comudy">
-                </div>
-                <h3>{{portfolio.title}}</h3>
-                <div class="portfolio-item-cta">
-                    <a [href]="portfolio.github" class="btn" target="_blank">Github</a>
-                    <a [href]="portfolio.web" class="btn btn-primary" target="_blank">Live Demo</a>
-                </div>
-            </article>
-        </ng-container>
+        <article class="portfolio-item">
+            <div class="portfolio-item-image">
+                <img src="../../../assets/comudy-isotipo.svg" alt="Comudy">
+            </div>
+            <h3>Comudy</h3>
+            <p>🔹 Tu universidad digitalizada
+            </p>
+            <div class="portfolio-item-cta">
+                <a href="https://comudy.com/" class="btn btn-primary" target="_blank">Live
+                    Demo</a>
+            </div>
+        </article>
+        <article class="portfolio-item">
+            <div class="portfolio-item-image">
+                <img class="img" src="../../../assets/giphy.gif" alt="Comudy">
+            </div>
+            <h3>Gif Expert</h3>
+            <p>🔹 Busca tu gif
+            </p>
+            <div class="portfolio-item-cta">
+                <a href="https://github.com/AdrianCabello/GifExpert" class="btn" target="_blank">Github</a>
+                <a href="https://adriancabello.github.io/GifExpert/" class="btn btn-primary" target="_blank">Live
+                    Demo</a>
+            </div>
+        </article>
+
+        <!--   <article class="portfolio-item">
+            <div class="portfolio-item-image">
+                <img src="../../../assets/comudy.svg" alt="Comudy">
+            </div>
+            <h3>Comudy</h3>
+            <div class="portfolio-item-cta">
+                <a [href]="portfolio.github" class="btn" target="_blank">Github</a>
+                <a [href]="portfolio.web" class="btn btn-primary" target="_blank">Live Demo</a>
+            </div>
+        </article> -->
+    </div>
+    <h2>Sets</h2>
+
+    <div class="container portfolio-container">
     </div>
 
 

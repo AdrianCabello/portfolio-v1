@@ -1,3 +1,7 @@
+.contact {
+    height: 100vh;
+    padding-top: 3rem;
+}
 .contact-container {
     display: grid;
     grid-template-columns: 30% 58%;
@@ -11,9 +15,9 @@
 }
 
 .contact-option {
-    background: var(--color--bg-variant);
+    background: var(--light-navy);
     padding: 1.2rem;
-    border-radius: 1.2rem;
+    border-radius: 4px;
     text-align: center;
     border: 1px solid transparent;
     transform: var(--transition);
@@ -22,11 +26,6 @@
         font-weight: 500;
         font-size: 1rem;
     }
-}
-
-.contact-option:hover {
-    background: transparent;
-    border-color: var(--color--primary-variant);
 }
 
 .contact-option-icon {
@@ -38,6 +37,7 @@
     margin-top: 0.7rem;
     display: inline-block;
     font-size: 0.8rem;
+    color: white;
 }
 
 /* ==================== FORM ==================== */
