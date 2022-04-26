@@ -10,6 +10,7 @@ import { ExperienceComponent } from './pages/experience/experience.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './component/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

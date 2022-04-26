@@ -1,16 +1,61 @@
 <section id="experience" class="experience">
-    <h5>What I do</h5>
+    <h5>Where I've Worked</h5>
     <h2>My Experience</h2>
 
     <div class="container experience-container-exp">
         <article class="experience-exp">
             <div class="exp-company">
-                <span>SparkDigital</span>
-                <span>SparkDigital</span>
-                <span>SparkDigital</span>
+                <ng-container>
+                    <ng-container *ngFor="let exp of experiences">
+                        <span (click)="selectExp(exp)"
+                            [ngClass]="{ active: exp.id === experience.id}">{{exp.company}}</span>
+                    </ng-container>
+                </ng-container>
             </div>
             <div class="exp-info">
-                asd
+                <h2>{{experience.title}}
+                    <a *ngIf="experience.web" [href]="experience.web" target="_blanc">@{{experience.company}}</a>
+                    <a *ngIf="!experience.web">@{{experience.company}}</a>
+                </h2>
+                <p class="date">{{experience.start}} - {{experience.end}} </p>
+                <p>{{experience.info}}</p>
+                <div class="exp-client" *ngFor="let client of experience.client">
+                    <h3>
+                        <a *ngIf="client.web" [href]="client.web" target="_blanc">{{client.name}}</a>
+                        <a *ngIf="!client.web">{{client.name}}</a>
+                    </h3>
+                    <p>{{client.info}}</p>
+                    <ul>
+                        <li *ngFor="let item of client.items">■ {{item.text}}</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Mobile -->
+            <div class="exp-mobile-container">
+                <mat-tab-group>
+                    <ng-container *ngFor="let exp of experiences">
+                        <mat-tab [label]="exp.company">
+                            <div class="exp-info-mobile">
+                                <h2>{{exp.title}}
+                                    <a *ngIf="exp.web" [href]="exp.web" target="_blanc">@{{exp.company}}</a>
+                                    <a *ngIf="!exp.web">@{{exp.company}}</a>
+                                </h2>
+                                <p class="date">{{exp.start}} - {{exp.end}} </p>
+                                <p>{{exp.info}}</p>
+                                <div class="exp-client" *ngFor="let client of exp.client">
+                                    <h3>
+                                        <a *ngIf="client.web" [href]="client.web" target="_blanc">{{client.name}}</a>
+                                        <a *ngIf="!client.web">{{client.name}}</a>
+                                    </h3>
+                                    <p>{{client.info}}</p>
+                                    <ul>
+                                        <li *ngFor="let item of client.items">■ {{item.text}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </mat-tab>
+                    </ng-container>
+                </mat-tab-group>
             </div>
         </article>
     </div>
@@ -22,43 +67,31 @@
             <h3>Frontend Development</h3>
             <div class="experience-content">
                 <article class="experience-details">
-                    <span class="material-icons">
-                        beenhere
-                    </span>
+                    <img src="../../../assets/html.svg" alt="">
                     <h4>HTML</h4>
                 </article>
 
                 <article class="experience-details">
-                    <span class="material-icons">
-                        beenhere
-                    </span>
+                    <img src="../../../assets/css-3.svg" alt="">
                     <h4>CSS</h4>
                 </article>
 
                 <article class="experience-details">
-                    <span class="material-icons">
-                        beenhere
-                    </span>
+                    <img src="../../../assets/js.svg" alt="">
                     <h4>Javascript</h4>
                 </article>
 
                 <article class="experience-details">
-                    <span class="material-icons">
-                        beenhere
-                    </span>
+                    <img src="../../../assets/bootstrap.svg" alt="">
                     <h4>Bootstrap</h4>
                 </article>
 
                 <article class="experience-details">
-                    <span class="material-icons">
-                        beenhere
-                    </span>
+                    <img src="../../../assets/angular.png" alt="">
                     <h4>Angular</h4>
                 </article>
                 <article class="experience-details">
-                    <span class="material-icons">
-                        beenhere
-                    </span>
+                    <img src="../../../assets/angular-material.svg" alt="">
                     <h4>Angular Material</h4>
                 </article>
             </div>
@@ -68,45 +101,36 @@
             <h3>Backend Development</h3>
             <div class="experience-content">
                 <article class="experience-details">
-                    <span class="material-icons">
-                        beenhere
-                    </span>
+                    <img src="../../../assets/node.svg" alt="">
                     <h4>Node JS</h4>
                 </article>
                 <article class="experience-details">
-                    <span class="material-icons">
-                        beenhere
-                    </span>
+                    <img src="../../../assets/nest.svg" alt="">
                     <h4>Nest JS</h4>
                 </article>
                 <article class="experience-details">
-                    <span class="material-icons">
-                        beenhere
-                    </span>
+                    <img src="../../../assets/loopback.svg" alt="">
                     <h4>Loopback</h4>
                 </article>
                 <article class="experience-details">
-                    <span class="material-icons">
-                        beenhere
-                    </span>
+                    <img src="../../../assets/mongo.svg" alt="">
                     <h4>MongoDB</h4>
                 </article>
 
                 <article class="experience-details">
-                    <span class="material-icons">
-                        beenhere
-                    </span>
+                    <img src="../../../assets/postgresql.png" alt="">
                     <h4>Postgresql</h4>
                 </article>
 
                 <article class="experience-details">
-                    <span class="material-icons">
-                        beenhere
-                    </span>
+                    <img src="../../../assets/mysql.svg" alt="">
                     <h4>MySQL</h4>
                 </article>
             </div>
         </div>
     </div>
+    <!-- 
+    <h5>What I learn</h5>
+    <h2>My Knowledge</h2> -->
 
 </section>

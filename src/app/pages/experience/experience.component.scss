@@ -7,27 +7,35 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    margin-bottom: 5rem;
 }
 
 .experience-container-exp {
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .experience-exp {
     background: var(--light-navy);
-    padding: 2.4rem 5rem;
+    padding: 1rem;
     border-radius: 4px;
     border: 1px solid transparent;
     transition: var(--transition);
-    width: 50%;
     display: flex;
+    width: 100%;
+    word-wrap: break-word;
     .exp-company {
         display: flex;
         flex-direction: column;
-        margin-right: 0.3rem;
-
+        margin-right: 1rem;
+        padding-right: 1rem;
+        border-right: 1px solid #ccc;
+        width: 250px;
+        text-align: right;
+        .active {
+            opacity: 0.9;
+        }
         span {
             cursor: pointer;
             padding: 0.3rem;
@@ -36,18 +44,60 @@
             margin-bottom: 0.5rem;
             opacity: 0.6;
             &:hover {
-                background: transparent;
-                border-color: var(--light-navy);
+                color: white;
+                opacity: 1;
                 /*     border: 1px solid #ccc; */
+            }
+            .active {
+                opacity: 1;
             }
         }
     }
     .exp-info {
-        text-align: center;
+        text-align: left;
         width: 100%;
+        word-wrap: break-word;
+        overflow: hidden;
+        a {
+            color: var(--color--primary);
+        }
+        .date {
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        h2 {
+            font-size: 1.4rem;
+        }
+    }
+    .exp-client {
+        margin-top: 10px;
+        h3 {
+            color: var(--color--primary);
+        }
+        p {
+            margin-bottom: 10px;
+        }
+    }
+
+    .mat-tab-label {
+        color: white;
+    }
+
+    /* Styles for the active tab label */
+    .mat-tab-label.mat-tab-label-active {
+        min-width: 25px !important;
+        padding: 5px;
+        background-color: transparent;
+        color: white;
+        opacity: 1;
+        font-weight: 700;
     }
 }
-
+.exp-mobile-container {
+    overflow: hidden;
+    display: none;
+}
 .experience-container > div {
     background: var(--light-navy);
     padding: 2.4rem 5rem;
@@ -70,6 +120,13 @@
 .experience-details {
     display: flex;
     gap: 1rem;
+    img {
+        height: 26px;
+    }
+}
+
+.knowledge-container {
+    margin-top: 2rem;
 }
 
 /* Media Queries (Medium Devices) */
@@ -87,6 +144,10 @@
     .experience-content {
         padding: 1rem;
     }
+
+    .experience-exp {
+        width: 100%;
+    }
 }
 
 /* Media Queries (Small Devices) */
@@ -99,5 +160,36 @@
     .experience-container > div {
         width: 100%;
         padding: 2rem 1rem;
+    }
+    .experience-exp {
+        .exp-company {
+            display: none;
+        }
+
+        .exp-info {
+            display: none;
+        }
+    }
+    .exp-mobile-container {
+        display: initial;
+        .exp-info-mobile {
+            text-align: left;
+            width: 100%;
+            word-wrap: break-word;
+            overflow: hidden;
+            display: initial;
+            a {
+                color: var(--color--primary);
+            }
+            .date {
+                margin-bottom: 10px;
+                font-size: 0.8rem;
+                opacity: 0.7;
+            }
+            h2 {
+                font-size: 1.4rem;
+                padding-top: 1rem;
+            }
+        }
     }
 }
